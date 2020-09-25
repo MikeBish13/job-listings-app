@@ -1,11 +1,12 @@
 /* Set Up =====
 ============= */
+
 @import url("https://fonts.googleapis.com/css2?family=Spartan:wght@500;700&display=swap");
+
 *,
 *::before,
 *::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 :root {
@@ -52,6 +53,7 @@ header {
 
 /* Components ====
 ================ */
+
 .btn {
   font-size: 14px;
   font-weight: var(--fw-bold);
@@ -64,47 +66,41 @@ header {
   background: var(--clr-light-grayish-cyan);
   color: var(--clr-desat-cyan);
   border: none;
-  -webkit-transition: all 0.25s linear;
   transition: all 0.25s linear;
-}
 
-.btn-tag:hover {
-  cursor: pointer;
-  color: var(--clr-light-grayish-cyan);
-  background: var(--clr-desat-cyan);
+  &:hover {
+    cursor: pointer;
+    color: var(--clr-light-grayish-cyan);
+    background: var(--clr-desat-cyan);
+  }
 }
 
 .filter-btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-}
+  align-items: stretch;
 
-.filter-btn p {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  pointer-events: none;
-}
+  p {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    pointer-events: none;
+  }
 
-.filter-btn button {
-  color: white;
-  background: var(--clr-desat-cyan);
-  border: none;
-  border-radius: 5px;
-  border-bottom-left-radius: 0;
-  border-top-left-radius: 0;
-  width: 2.5em;
-  font-weight: var(--fw-bold);
-  -webkit-transition: all 0.25s linear;
-  transition: all 0.25s linear;
-}
+  button {
+    color: white;
+    background: var(--clr-desat-cyan);
+    border: none;
+    border-radius: 5px;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    width: 2.5em;
+    font-weight: var(--fw-bold);
+    transition: all 0.25s linear;
 
-.filter-btn button:hover {
-  background: var(--clr-very-dark-cyan);
-  cursor: pointer;
+    &:hover {
+      background: var(--clr-very-dark-cyan);
+      cursor: pointer;
+    }
+  }
 }
 
 .clear-btn {
@@ -112,73 +108,58 @@ header {
   border: none;
   color: var(--clr-desat-cyan);
   position: relative;
-}
 
-.clear-btn::after {
-  content: "";
-  width: 0%;
-  height: 1px;
-  position: absolute;
-  bottom: 5px;
-  left: 0;
-  background: var(--clr-desat-cyan);
-  -webkit-transition: all 0.25s linear;
-  transition: all 0.25s linear;
-}
+  &::after {
+    content: "";
+    width: 0%;
+    height: 1px;
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    background: var(--clr-desat-cyan);
+    transition: all 0.25s linear;
+  }
 
-.clear-btn:hover {
-  cursor: pointer;
-}
+  &:hover {
+    cursor: pointer;
 
-.clear-btn:hover::after {
-  width: 100%;
+    &::after {
+      width: 100%;
+    }
+  }
 }
 
 /* Filter Bar =====
 =============== */
+
 .filter-bar {
   background: white;
   width: 90%;
   max-width: 1000px;
   margin: -5.5rem auto 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   padding: 1em 2em;
   border-radius: 10px;
-  -webkit-box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-          box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
   position: relative;
   z-index: 1;
 }
 
 .filter-buttons {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   gap: 1em;
 }
 
 /* Job Listing ====
 ================= */
+
 .job-listing {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: flex-start;
+  align-items: center;
   gap: 2em;
   padding: 2em 3em;
   background: white;
@@ -186,8 +167,7 @@ header {
   width: 90%;
   max-width: 1000px;
   border-radius: 10px;
-  -webkit-box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-          box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
 }
 
 .job-listing-featured {
@@ -195,12 +175,8 @@ header {
 }
 
 .details-top {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   gap: 1em;
   margin-bottom: 1em;
 }
@@ -212,16 +188,14 @@ header {
 
 .job-position {
   color: var(--clr-very-dark-cyan);
-}
 
-.job-position:hover {
-  cursor: pointer;
-  color: var(--clr-desat-cyan);
+  &:hover {
+    cursor: pointer;
+    color: var(--clr-desat-cyan);
+  }
 }
 
 .details-bottom {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 1em;
   margin-top: 1em;
@@ -230,11 +204,8 @@ header {
 }
 
 .tags {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   gap: 0.5em;
   margin-left: auto;
 }
@@ -261,33 +232,37 @@ header {
 
 /* Media queries =====
 =============== */
+
 @media (max-width: 800px) {
   .filter-bar {
     margin-bottom: 4em;
   }
+
   .job-listing {
     position: relative;
     display: block;
     margin-bottom: 4em;
     padding: 2em 1em;
   }
+
   .job-logo {
     width: 4rem;
     position: absolute;
     top: -30px;
   }
+
   .job-position {
     font-size: 1rem;
   }
+
   .details-top {
     margin-top: 1em;
   }
   .details-bottom {
-    width: -webkit-max-content;
-    width: -moz-max-content;
     width: max-content;
     margin-bottom: 3em;
   }
+
   .details-bottom::after {
     content: "";
     width: 100%;
@@ -303,8 +278,8 @@ header {
   .mobile-header {
     display: block;
   }
+
   .desktop-header {
     display: none;
   }
 }
-/*# sourceMappingURL=App.css.map */
